@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('registration/', views.registration),
-    path('', views.index_page),
+    path('https://00arkhip00.github.io/A_A_Security/', views.index_page),
     path('chats/', views.chats),
     path('chat/', views.chat),
 ]
