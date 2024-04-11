@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chat.css' %}">
+    <meta charset="UTF-8">
+    <title>Чат с Sergey</title>
+</head>
+<body>
+{% for i in db %}
+{% with i|join:": " as string %}
+    {{ string }}
+{% endwith %}
+<br>
+{% endfor %}
+<form action="http://127.0.0.1:8000/chat/" method="POST">
+    {% csrf_token %}
+        <input type="text" name="message">
+    <button type="submit">Отправить</button>
+</form>
+<a href="/chats">
+    <button>Список чатов</button>
+</a>
+</body>
+</html>

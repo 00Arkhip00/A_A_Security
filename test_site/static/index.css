@@ -1,0 +1,22 @@
+h1 {
+font-size: 60px;
+text-align: center;
+border: 10px double #edb9b9;
+margin-top: 10%;
+}
+button {
+margin-left: 60%;
+font-size: 20px;
+display: inline-block;
+margin-top: 30%;
+vertical-align: top;
+}
+img {
+width: 50%;
+height: 50%;
+display: inline-block;
+}
+a {
+display: inline-block;
+vertical-align: top;
+}

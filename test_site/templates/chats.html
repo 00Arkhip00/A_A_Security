@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'chats.css' %}">
+    <meta charset="UTF-8">
+    <title>Ваши чаты</title>
+</head>
+<body>
+<form action="/chats/" method="POST">
+    {% csrf_token %}
+    <input type="text" name="new_chat" placeholder="Введите имя нужного человека">
+    <button type="submit">Добавить новый чат</button>
+</form>
+<form action="/chats/" method="POST">
+    {% csrf_token %}
+    <input type="text" name="old_chat" placeholder="Введите имя нужного человека">
+    <button type="submit">Удалить чат</button>
+</form>
+<form action="/chats/" method="POST">
+    {% csrf_token %}
+    {% for chat in db %}
+<div><p>{{chat.name}}</p><input type="radio" name="name" value={{chat.name}}></div>
+{% endfor %}
+    <button type="submit" class="b1">Перейти в диалог</button>
+</form>
+<form action="/accounts/logout/" method="post">
+    {% csrf_token %}
+    <button type="submit">Выйти из аккаунта</button>
+</form>
+</body>
+</html>

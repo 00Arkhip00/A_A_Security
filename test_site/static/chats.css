@@ -1,0 +1,23 @@
+div {
+background-color: #f0e4e4;
+width: 50%;
+border: 2px dashed gray;
+padding: 4%;
+margin-left: 20%;
+}
+p {
+text-align: center;
+font-size: 105%;
+font-weight: bold;
+display: inline-block;
+}
+.b1 {
+margin-top: 1%;
+float: center;
+border: 2px solid black;
+border-radius: 100px;
+}
+body {
+background-color: #9df9ef;
+}
+
